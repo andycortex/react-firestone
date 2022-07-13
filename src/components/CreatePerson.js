@@ -13,7 +13,7 @@ const CreatePerson = ({ id, setPersonId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage("");
-    if (age < 18 || name.length > 4 ){
+    if (age < 18 || name.length < 4) {
       setMessage({ error: true, msg: "tiene que ser mayor de edad y el nombre tiene que contener mas de 4 caracteres" });
       return;
     }
